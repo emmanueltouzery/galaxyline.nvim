@@ -226,11 +226,13 @@ function galaxyline.load_galaxyline()
 end
 
 function galaxyline.inactive_galaxyline()
-  if next(galaxyline.short_line_list) == nil then
-    vim.wo.statusline = normal_line
-  else
-    vim.wo.statusline = short_line
-  end
+  return
+
+  -- if next(M.short_line_list) == nil and next(M.short_line_buftypes) == nil then
+  --   vim.wo.statusline = normal_line
+  -- else
+  --   vim.wo.statusline = short_line
+  -- end
 end
 
 function galaxyline.init_colorscheme()
